@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --fundo: #0b1020;
+  --fundo2: #161a3a;
+  --roxo: #3c2878;
+  --ouro: #f5d98b;
+  --ouro2: #d9a441;
+  --texto: #e9e4d8;
+  --suave: #b9ae95;
+  --linha: rgba(217, 164, 65, .35);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--fundo); }
+body {
+  margin: 0;
+  font: 400 17px/1.65 Inter, system-ui, sans-serif;
+  color: var(--texto);
+  background: radial-gradient(ellipse at 30% -10%, var(--roxo) 0%, var(--fundo2) 45%, var(--fundo) 100%) fixed;
+  min-height: 100vh;
+}
+a { color: var(--ouro); }
+a:hover { color: #fff3d0; }
+
+.topo { max-width: 960px; margin: 0 auto; padding: 20px 16px; display: flex; align-items: center; gap: 12px; }
+.topo img { width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 0 0 2px var(--ouro2); }
+.topo b { font: 900 20px Cinzel, serif; color: var(--ouro); letter-spacing: 1px; }
+.topo nav { margin-left: auto; display: flex; gap: 16px; font-weight: 600; font-size: 15px; flex-wrap: wrap; }
+.topo nav a { color: var(--suave); text-decoration: none; }
+.topo nav a:hover { color: var(--ouro); }
+
+main { max-width: 960px; margin: 0 auto; padding: 8px 16px 64px; }
+.hero { text-align: center; padding: 40px 0 24px; }
+.hero img { width: 140px; height: 140px; border-radius: 50%; box-shadow: 0 0 0 4px var(--ouro2), 0 18px 40px rgba(0,0,0,.5); }
+h1, h2 { font-family: Cinzel, serif; color: var(--ouro); line-height: 1.15; }
+.hero h1 {
+  font-size: clamp(36px, 7vw, 64px); margin: 22px 0 8px;
+  background: linear-gradient(180deg, #fff3d0 0%, #f5d98b 42%, #d9a441 70%, #8a6320 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p { color: var(--suave); font-size: 19px; margin: 0 auto; max-width: 640px; }
+h2 { font-size: 26px; margin: 44px 0 12px; }
+h3 { color: #fff; margin: 26px 0 6px; font-size: 18px; }
+
+.botoes { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+.botao {
+  display: inline-block; padding: 12px 22px; border-radius: 10px; font-weight: 800; text-decoration: none;
+  background: linear-gradient(180deg, #f5d98b, #d9a441); color: #2a1a05;
+}
+.botao.sec { background: transparent; color: var(--ouro); box-shadow: inset 0 0 0 2px var(--linha); }
+
+.cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.cartao { background: rgba(11, 16, 32, .6); border: 1px solid var(--linha); border-radius: 14px; padding: 18px; }
+.cartao h3 { margin-top: 0; color: var(--ouro); }
+.cartao p { margin: 0; color: var(--suave); font-size: 15px; }
+code { background: rgba(245, 217, 139, .12); padding: 1px 6px; border-radius: 5px; color: var(--ouro); }
+
+.doc { background: rgba(11, 16, 32, .55); border: 1px solid var(--linha); border-radius: 14px; padding: 8px 24px 24px; }
+.doc ul { padding-left: 20px; }
+.idioma { color: var(--suave); font-size: 14px; }
+hr { border: 0; border-top: 1px solid var(--linha); margin: 36px 0; }
+
+footer { text-align: center; color: var(--suave); font-size: 14px; padding: 24px 16px 40px; }
+footer a { color: var(--suave); }
+
+@media (max-width: 600px) {
+  .topo { flex-wrap: wrap; }
+  .topo nav { margin-left: 0; width: 100%; }
+  .doc { padding: 4px 16px 18px; }
+}
